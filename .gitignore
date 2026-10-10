@@ -1,0 +1,81 @@
+# Environment variables and local secrets
+**/.env
+**/.env.*
+!**/.env.example
+**/*.local
+**/credentials.json
+**/service-account*.json
+**/*service-account*.json
+**/.npmrc
+**/.pypirc
+**/.netrc
+
+# Private keys and signing material
+**/*.pem
+**/*.key
+**/*.p12
+**/*.pfx
+**/*.jks
+**/*.keystore
+**/key.properties
+
+# Firebase platform configuration (provide locally or in CI)
+**/google-services.json
+**/GoogleService-Info.plist
+
+# JavaScript / Next.js
+**/node_modules/
+**/.next/
+**/out/
+**/dist/
+**/coverage/
+
+# Flutter / Dart
+**/.dart_tool/
+**/.pub-cache/
+**/.pub/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/build/
+**/flutter/ephemeral/
+**/.plugin_symlinks/
+**/Flutter/Generated.xcconfig
+**/Flutter/flutter_export_environment.sh
+**/Runner/GeneratedPluginRegistrant.h
+**/Runner/GeneratedPluginRegistrant.m
+**/Pods/
+**/DerivedData/
+**/xcuserdata/
+**/.gradle/
+**/local.properties
+**/gradle-wrapper.jar
+**/gradlew
+**/gradlew.bat
+flutter-sdk/
+
+# Runtime/user content
+**/uploads/
+
+# IDE and OS files
+**/.idea/
+**/.vscode/
+**/.DS_Store
+**/Thumbs.db
+**/desktop.ini
+
+# Logs, caches and backups
+**/*.log
+**/*.tmp
+**/*.bak
+**/*.backup
+**/*.tar
+**/*.rar
+**/*.7z
+**/*.zip
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Internal audit/deployment notes
+**/security-breaches.md
+**/BACKUPS.md

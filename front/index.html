@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HuellamiGO - Test de flujo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="sidebar" aria-label="Panel de reportes">
+        <header class="brand">
+          <img src="huellamigo.png" alt="HuellamiGO" />
+        </header>
+
+        <section class="quick-alert" aria-labelledby="alert-title">
+          <div>
+            <p class="eyebrow">Mascota perdida</p>
+            <h1 id="alert-title">Nina busca volver a casa</h1>
+            <p class="subcopy">
+              Vista por ultima vez en Barrio El Roble, cerca del parque.
+            </p>
+          </div>
+          <span class="status-pill">Activa</span>
+        </section>
+
+        <nav class="tabs" aria-label="Vistas">
+          <button class="tab is-active" data-view="mapa">Mapa</button>
+          <button class="tab" data-view="reportar">Reportar</button>
+          <button class="tab" data-view="alertas">Alertas</button>
+        </nav>
+
+        <section class="panel view is-active" id="view-mapa">
+          <div class="pet-card selected" data-pet="nina">
+            <div class="pet-photo nina"></div>
+            <div>
+              <p class="card-kicker">Perra - 30 min</p>
+              <h2>Nina</h2>
+              <p>Pequena, collar cafe, usa panuelo verde.</p>
+            </div>
+          </div>
+
+          <div class="pet-card" data-pet="taco">
+            <div class="pet-photo taco"></div>
+            <div>
+              <p class="card-kicker">Gato - 2 h</p>
+              <h2>Taco</h2>
+              <p>Gris con blanco, asustadizo, responde a su nombre.</p>
+            </div>
+          </div>
+
+          <div class="pet-card" data-pet="mora">
+            <div class="pet-photo mora"></div>
+            <div>
+              <p class="card-kicker">Perra - ayer</p>
+              <h2>Mora</h2>
+              <p>Mediana, muy sociable, ultima vez cerca de la tienda.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel view" id="view-reportar">
+          <label>
+            Nombre
+            <input type="text" value="Nina" />
+          </label>
+          <label>
+            Zona aproximada
+            <input type="text" value="Parque El Roble" />
+          </label>
+          <label>
+            Detalles claros
+            <textarea>Pequena, collar cafe, usa panuelo verde.</textarea>
+          </label>
+          <button class="primary-button" id="publish-button">Publicar alerta</button>
+        </section>
+
+        <section class="panel view" id="view-alertas">
+          <div class="metric">
+            <strong id="connected-count">--</strong>
+            <span>personas conectadas</span>
+          </div>
+          <p class="subcopy">
+            La comunidad recibe avisos por zona para responder rapido cuando
+            alguien reporta un avistamiento.
+          </p>
+          <button class="primary-button muted">Activar zona</button>
+        </section>
+      </aside>
+
+      <section class="map-stage" aria-label="Mapa de reportes">
+        <div class="map-toolbar">
+          <button aria-label="Acercar">+</button>
+          <button aria-label="Alejar">-</button>
+        </div>
+
+        <div class="street street-a"></div>
+        <div class="street street-b"></div>
+        <div class="street street-c"></div>
+        <div class="park">
+          <span>Parque El Roble</span>
+        </div>
+
+        <button class="map-pin active" style="--x: 56%; --y: 42%" data-pet="nina">
+          <span>Nina</span>
+        </button>
+        <button class="map-pin" style="--x: 73%; --y: 62%" data-pet="taco">
+          <span>Taco</span>
+        </button>
+        <button class="map-pin" style="--x: 35%; --y: 68%" data-pet="mora">
+          <span>Mora</span>
+        </button>
+
+        <article class="sighting-card">
+          <p class="card-kicker">Nuevo avistamiento</p>
+          <h2>La vi cerca del kiosko</h2>
+          <p>Hace 8 minutos - Se compartio ubicacion aproximada.</p>
+          <button class="primary-button compact" id="seen-button">La vi</button>
+        </article>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

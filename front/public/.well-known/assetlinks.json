@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.huellamigo.mobile",
+      "sha256_cert_fingerprints": [
+        "AA:6B:14:37:E1:E1:3F:0A:C2:25:93:DF:BE:A4:F9:F6:BD:51:2F:B2:AF:64:EB:0A:D0:8C:CE:21:23:C7:27:31"
+      ]
+    }
+  }
+]

@@ -1,0 +1,205 @@
+.betaHelp {
+  position: relative;
+  z-index: 90;
+}
+
+.floatingButton {
+  position: fixed;
+  right: max(18px, env(safe-area-inset-right));
+  bottom: max(18px, env(safe-area-inset-bottom));
+  z-index: 90;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 0 16px;
+  color: #fff;
+  background: #214e45;
+  border: 1px solid rgba(255, 250, 240, 0.34);
+  border-radius: 999px;
+  box-shadow: 0 14px 34px rgba(33, 78, 69, 0.24);
+  font-family: var(--font-ui), system-ui, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.floatingButton:hover {
+  transform: translateY(-1px);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: end;
+  padding: 18px;
+  background: rgba(33, 78, 69, 0.28);
+  backdrop-filter: blur(8px);
+}
+
+.panel {
+  display: grid;
+  gap: 14px;
+  width: min(420px, 100%);
+  padding: 16px;
+  color: #214e45;
+  background: #fffaf0;
+  border: 1px solid rgba(33, 78, 69, 0.16);
+  border-radius: 12px;
+  box-shadow: 0 24px 70px rgba(33, 78, 69, 0.24);
+  font-family: var(--font-ui), system-ui, sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.header p {
+  margin: 0 0 4px;
+  color: #e07057;
+  font-size: 0.72rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.header h2 {
+  margin: 0;
+  color: #214e45;
+  font-family: var(--font-title), system-ui, sans-serif;
+  font-size: 1.58rem;
+  line-height: 1;
+}
+
+.closeButton {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  color: #214e45;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(33, 78, 69, 0.16);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.form {
+  display: grid;
+  gap: 12px;
+}
+
+.form label {
+  display: grid;
+  gap: 7px;
+  color: #214e45;
+  font-size: 0.84rem;
+  font-weight: 900;
+}
+
+.selectWrap {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 12px;
+  background: #fff;
+  border: 1px solid rgba(33, 78, 69, 0.14);
+  border-radius: 10px;
+}
+
+.selectWrap select,
+.form input,
+.form textarea {
+  width: 100%;
+  color: #2b2b2b;
+  background: #fff;
+  border: 1px solid rgba(33, 78, 69, 0.14);
+  border-radius: 10px;
+  font: inherit;
+  outline: none;
+}
+
+.selectWrap select {
+  min-height: 42px;
+  background: transparent;
+  border: 0;
+}
+
+.form input {
+  min-height: 44px;
+  padding: 0 12px;
+}
+
+.form textarea {
+  min-height: 132px;
+  resize: vertical;
+  padding: 12px;
+  line-height: 1.35;
+}
+
+.formFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.formFooter span {
+  color: rgba(43, 43, 43, 0.58);
+  font-size: 0.78rem;
+  font-weight: 850;
+}
+
+.submitButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 16px;
+  color: #fff;
+  background: #e07057;
+  border: 0;
+  border-radius: 12px;
+  font-weight: 950;
+  cursor: pointer;
+}
+
+.message {
+  margin: 0;
+  color: #e07057;
+  font-size: 0.84rem;
+  font-weight: 850;
+}
+
+@media (max-width: 760px) {
+  .floatingButton {
+    right: 14px;
+    bottom: calc(86px + env(safe-area-inset-bottom));
+    width: 46px;
+    padding: 0;
+  }
+
+  .floatingButton span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+  }
+
+  .overlay {
+    align-items: end;
+    padding: 12px;
+  }
+
+  .panel {
+    width: 100%;
+  }
+}
