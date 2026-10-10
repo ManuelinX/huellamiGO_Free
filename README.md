@@ -166,6 +166,3 @@ huellamiGO_Free/
 
 Desarrollado por [ManuelinX](https://github.com/ManuelinX).
 
-## Licencia
-
-La licencia de distribución y reutilización todavía no ha sido definida.
