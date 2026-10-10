@@ -61,8 +61,6 @@ Para ofrecer una demostración pública funcional es necesario desplegar:
 2. El frontend configurado con la URL pública del backend.
 3. Opcionalmente, los servicios de correo, Web Push y Firebase.
 
-**Demo web:** [huellamigo-demo.nicemouse4.chatgpt.site](https://huellamigo-demo.nicemouse4.chatgpt.site)
-
 ## Ejecución local
 
 ### Requisitos
@@ -165,4 +163,3 @@ huellamiGO_Free/
 ## Autor
 
 Desarrollado por [ManuelinX](https://github.com/ManuelinX).
-
